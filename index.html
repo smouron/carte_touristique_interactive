@@ -44,7 +44,6 @@
 	<hr />
 	<div id="donnees">
 		<section id="section_gauche">
-
 			<h1>Carte de France métropolitaine</h1>
 			<h2>Sélectionnez la carte à afficher</h2>
 			<br />
@@ -52,7 +51,7 @@
 				<!--                                                                   -->
 				<!-- Menu déroulant avec la liste des départements, classés par région -->
 				<!--                                                                 -->
-				<div id="par-departement">
+				<div class="par-departement">
 					<label for="pays">Par département</label>
 					<form name="form">
 						<select size="1" name="departements" id="departements">
@@ -185,7 +184,7 @@
 						</select>
 					</form>
 				</div>
-				<div id="par-region">
+				<div class="par-region">
 					<!--                                          -->
 					<!-- Menu déroulant avec la liste des régions -->
 					<!--                                          -->
@@ -218,17 +217,16 @@
 			<!--                                                                  -->
 			<!--                                                                  -->
 			<div id="container_cartefrance">
-				<div id="carte_par_regions">
-					<a href="france_departements.html"><img src="./assets/images/carte-france-regions.png"
-							alt="Accéder à la carte de France avec zones sélectionnables par régions"
-							title="Voir la carte de France par régions" width="250" height="250" /></a>
-				</div>
-
-				<div id="carte_par_departements">
+				<div class="carte_par_departements">
 					<a href="france_departements.html"><img src="./assets/images/carte-france-departements.png"
 							alt="Accéder à la carte de France avec zones sélectionnables par départements"
-							title="Voir la carte de France par départements" width="250" height="250" /></a>
+							title="Voir la carte de France par départements"></a>
 
+				</div>
+				<div class="carte_par_regions">
+					<a href="france_departements.html"><img src="./assets/images/carte-france-regions.png"
+							alt="Accéder à la carte de France avec zones sélectionnables par régions"
+							title="Voir la carte de France par régions" /></a>
 				</div>
 			</div>
 		</section>

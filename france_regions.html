@@ -3,211 +3,53 @@
   
 	<head>
 		<meta charset="utf-8">
-		<META NAME = "Author" CONTENT ="SanoeCreation">
-		<META NAME = "Date" CONTENT ="12/09/2022">
-		<META NAME = "Description" CONTENT ="Sanoe Tourisme - Tourisme en France" >
-		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-        <link rel="stylesheet" href="style.css" /><!-- Pour tout le monde -->
-        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="petite_resolution.css" /> <!-- Pour ceux qui ont une résolution inférieure à 1280px -->
-		<title>Sanoe Tourisme - Carte de France interactive</title>
-		<link rel="shortcut icon" href=".\images\favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="robots" CONTENT="noindex, nofollow">
+
+	<meta name="author" CONTENT="Stéphane Mouron">
+	<meta name="date" CONTENT="2022/11/16">
+
+	<title>Sanoe Tourisme - Carte de France interactive par régions</title>
+	<meta name="description"
+		content="Carte intéractive, référençant tous les lieux touristiques en France métropolitaine.">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="SanoeTourisme" />
+	<meta property="og:url" content="#" />
+	<meta name="og:description"
+		content="Carte intéractive, référençant tous les lieux touristiques en France métropolitaine.">
+	<meta property="og:image" content=".\assets\images\carte-france-regions.png" />
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="./assets/styles/style.css" />
+	<link rel="stylesheet" media="screen and (max-width: 1024px)" href="./assets/styles/petite_resolution.css" />
+	<link rel="shortcut icon" href="./assets/images/favicon.png">
 	</head>
 	<body>
 		<header>
-			<a href="index.html"><img src="./images/logo-de-tourisme.png" class="logo_site" title="Logo Sanoe Tourisme" alt="Logo Sanoe Tourisme" /></a>
+			<a href="./index.html"><img src="./assets/images/logo-de-tourisme.png" class="logo_site" title="Logo Sanoe Tourisme" alt="Logo Sanoe Tourisme" /></a>
 			<nav id="liens_internes">
 				<ul>
-					<li><a href="france_nouvelles-regions.html">ACCUEIL</a></li>
-					<li><a href="#">BLOG</a></li>					
-					<li><a href="mailto:stephane.mouron@sanoecreation.fr">CONTACT</a></li>										
-					<li><a href="cv_stephane-mouron.html" target="_blank">MON CV</a></li>
+					<li><a href="./index.html">ACCUEIL</a></li>
+					<li><a href="#" alt="A propos de ce site et de moi">A PROPOS</a></li>				
+					<li><a href="mailto:stephane.mouron@sanoecreation.fr">CONTACT</a></li>	
+				<li><a href="https://www.sanoecreation.fr/cv_stephane-mouron/" target="_blank"
+						alt="Accéder à mon CV">MON CV</a></li>
 				</ul>
 			</nav>
 		</header>
 		<hr />
 		<div id="donnees">
 			<section id="section_gauche">
-				<nav>
-					
-				<!--                                                                   -->
-				<!-- Menu déroulant avec la liste des départements, classés par région -->
-				<!--                                                                   -->
-				<fieldset>
-					<legend></legend> <!-- Titre du fieldset -->
-					   <div>
-						   <label for="pays">Selectionnez le département</label>
-						   <form name="form" >
-							   <select size="1" name="departements" id="departements" title="Liste des départements métropolitains">
-								   <option value="aucun" selected > </option>
-								   <optgroup label="Auvergne-Rhône-Alpes">
-									   <option value="ain">Ain (01)</option>
-									   <option value="allier" >Allier (03)</option>
-									   <option value="ardeche">Ardèche (07)</option>
-									   <option value="cantal">Cantal(15)</option>
-									   <option value="drome">Drôme (26)</option>
-									   <option value="isere">Isère (38)</option>
-									   <option value="loire">Loire (42)</option>
-									   <option value="haute-loire">Haute-Loire (43)</option>
-									   <option value="puy-de-dome">Puy-de-Dôme(63)</option>
-									   <option value="rhone">Rhône (69)</option>
-									   <option value="savoie">Savoie (73)</option>
-								   </optgroup>
-								   <optgroup label="Bourgogne-Franche-Comté">
-									   <option value="cote-d_or">Côte-d'Or (21)</option>
-									   <option value="doubs">Doubs(25)</option>
-									   <option value="jura">Jura (39)</option>
-									   <option value="nievre">Nièvre (58)</option>
-									   <option value="haute-saone">Haute-Saône(70)</option>
-									   <option value="saone-et-loire">Saône-et-Loire (71)</option>
-									   <option value="yonne">Yonne (89)</option>
-									   <option value="territoire-de-belfort">Territoire de Belfort(90)</option>
-								   </optgroup>
-								   <optgroup label="Bretagne">
-									   <option value="cotes-d_armor">Côtes-d'Armor (22)</option>
-									   <option value="finistere">Finistère (29)</option>
-									   <option value="ille-et-vilaine">Ille-et-Vilaine (35)</option>
-									   <option value="morbihan">Morbihan (56)</option>
-								   </optgroup>
-								   <optgroup label="Centre-Val de Loire">
-									   <option value="cher">Cher(18)</option>
-									   <option value="eure-et-loir">Eure-et-Loir(28)</option>
-									   <option value="indre">Indre (36)</option>
-									   <option value="indre-et-loire">Indre-et-Loire (37)</option>
-									   <option value="loir-et-cher">Loir-et-Cher (41)</option>
-									   <option value="oiret">Loiret (45)</option>
-								   </optgroup>
-								   <optgroup label="Corse">
-									   <option value="corse-du-sud">Corse-du-Sud (2A)</option>
-									   <option value="haute-corse">Haute-Corse (2B)</option>
-								   </optgroup>
-								   <optgroup label="Grand Est">
-									   <option value="ardennes">Ardennes (08)</option>
-									   <option value="aube">Aube (10)</option>
-									   <option value="marne">Marne (51)</option>
-									   <option value="haute-marne">Haute-Marne (52)</option>
-									   <option value="meurthe-et-moselle">Meurthe-et-Moselle (54)</option>
-									   <option value="meuse">Meuse (55)</option>
-									   <option value="moselle">Moselle (57)</option>
-									   <option value="bas-rhin">Bas-Rhin (67)</option>
-									   <option value="haut-rhin">Haut-Rhin (68)</option>
-									   <option value="vosges">Vosges (88)</option>
-								   </optgroup>
-								   <optgroup label="Hauts-de-France">
-									   <option value="aisne">Aisne (02)</option>
-									   <option value="nord">Nord (59)</option>
-									   <option value="oise">Oise (60)</option>
-									   <option value="pas-de-calais">Pas-de-Calais (62)</option>
-									   <option value="somme">Somme (80)</option>
-								   </optgroup>
-								   <optgroup label="Île-de-France">
-									   <option value="Paris">Paris (75)</option>
-									   <option value="seine-et-marne">Seine-et-Marne (77)</option>
-									   <option value="yvelines">Yvelines (78)</option>
-									   <option value="essonne">Essonne (91)</option>
-									   <option value="hauts-de-seine">Hauts-de-Seine (92)</option>
-									   <option value="seine-saint-denis">Seine-Saint-Denis (93)</option>
-									   <option value="val-de-marne">Val-de-Marne (94)</option>
-									   <option value="val-d_oise">Val-d'Oise (95)</option>
-								   </optgroup>
-								   <optgroup label="Normandie">
-									   <option value="calvados">Calvados (14)</option>
-									   <option value="eure">Eure (27)</option>
-									   <option value="manche">Manche (50)</option>
-									   <option value="orne">Orne (61)</option>
-									   <option value="seine-maritime">Seine-Maritime (76)</option>
-								   </optgroup>
-								   <optgroup label="Nouvelle-Aquitaine">
-									   <option value="charente">Charente (16)</option>
-									   <option value="charente-maritime">Charente-Maritime (17)</option>
-									   <option value="correze">Corrèze (19)</option>
-									   <option value="creuse">Creuse (23)</option>
-									   <option value="dordogne">Dordogne (24)</option>
-									   <option value="gironde">Gironde (33)</option>
-									   <option value="landes">Landes (40)</option>
-									   <option value="lot-et-garonne">Lot-et-Garonne (47)</option>
-									   <option value="pyrenees-atlantiques">Pyrénées-Atlantiques (64)</option>
-									   <option value="deux-sevres">Deux-Sèvres (79)</option>
-									   <option value="vienne">Vienne (86)</option>
-									   <option value="haute-vienne">Haute-Vienne (87)</option>
-								   </optgroup>
-								   <optgroup label="Occitanie">
-									   <option value="ariege">Ariège (09)</option>
-									   <option value="aude">Aude (11)</option>
-									   <option value="aveyron">Aveyron (12)</option>
-									   <option value="gard">Gard (30)</option>
-									   <option value="haute-garonne">Haute-Garonne (31)</option>
-									   <option value="gers">Gers (32)</option>
-									   <option value="herault">Hérault (34)</option>
-									   <option value="lot">Lot (46)</option>
-									   <option value="lozere">Lozère (48)</option>
-									   <option value="hautes-pyrenees">Hautes-Pyrénées (65)</option>
-									   <option value="pyrenees-orientales">Pyrénées-Orientales (66)</option>
-									   <option value="tarn">Tarn (81)</option>
-									   <option value="tarn-et-garonne">Tarn-et-Garonne (82)</option>
-								   </optgroup>
-								   <optgroup label="Pays de la Loire">
-									   <option value="loire-atlantique">Loire-Atlantique (44)</option>
-									   <option value="maine-et-loire">Maine-et-Loire (49)</option>
-									   <option value="mayenne">Mayenne (53)</option>
-									   <option value="sarthe">Sarthe (72)</option>
-									   <option value="vendee">Vendée (85)</option>
-								   </optgroup>
-								   <optgroup label="Provence-Alpes-Côte d'Azur">
-									   <option value="alpes-de-haute-provence">Alpes-de-Haute-Provence (04)</option>
-									   <option value="hautes-alpes ">Hautes-Alpes (05)</option>
-									   <option value="alpes-maritimes">Alpes-Maritimes (06)</option>
-									   <option value="bouches-du-rhone">Bouches-du-Rhône (13)</option>
-									   <option value="var">Var (83)</option>
-									   <option value="vaucluse">Vaucluse (84)</option>
-								   </optgroup>
-								   <optgroup label="">
-									   <option value=""></option>
-									   <option value=""></option>
-								   </optgroup>
-							   </select>
-							</form>
-						</div>
-						
-						<div>
-						   <!--                                          -->
-						   <!-- Menu déroulant avec la liste des régions -->
-						   <!--                                          -->
-						   <label for="pays">Selectionnez la région</label><br />
-						   <form name="form" >
-							   <select size="1"  name="regions" id="regions" title="Liste des régions métropolitaines" onChange="location = this.options[this.selectedIndex].value;">
-								   <option value="index.html" selected > </option>
-								   <option value="carte-auvergne-rhone-alpes.html">Auvergne-Rhône-Alpes</option>
-								   <option value="carte-bourgogne-franche-comtes.html">Bourgogne-Franche-Comté</option>
-								   <option value="carte-bretagne.html">Bretagne</option>
-								   <option value="centre-val-de-loire">Centre-Val de Loire</option>
-								   <option value="carte-corse.html">Corse</option>
-								   <option value="carte-grand-est.html">Grand Est</option>
-								   <option value="carte-hauts-de-france.html">Hauts-de-France</option>
-								   <option value="carte-ile-de-france.html">Île-de-France</option>
-								   <option value="carte-normandie.html">Normandie</option>
-								   <option value="carte-nouvelle-aquitaine.html">Nouvelle-Aquitaine</option>
-								   <option value="carte-occitanie.html">Occitanie</option>
-								   <option value="carte-pays-de-la-loire.html">Pays de la Loire</option>
-								   <option value="carte-provence-alpes-cote-d_azur.html">Provence-Alpes-Côte d'Azur</option>
-								   <option value="index.html"></option>
-							   </select>
-						   </form>
-					   </div>
-					   
-					   <div>
-							<a href="france_departements.html"><img src="./images/France_Departements_mini.png" title="Afficher la carte de France par départements métropolitains" alt="Mini carte de France par régions métropolitaines" width="48" height="48" /></a>
-					   </div>	
-				 
-				</fieldset>
-				
-
-				</nav>	
+			<h1>Carte de France métropolitaine</h1>
+			<h2>Sélectionner la région souhaitée</h2>
+			<br />
 				
 				<!--                                                                  -->
 				<!-- Affichage de la carte de France avec les régions sélectionnables -->
 				<!--                                                                  -->
 				<article>
-					<h1>Sélectionner la région souhaitée</h1>
 					<map name="carte_france">
 						<!-- La Bretagne -->
 							<!-- -->
@@ -227,7 +69,7 @@
 							015,262,
 							014,260,041,259,043,257,043,253,042,249,032,245,028,250,028,243,023,242,026,238,032,242,038,243,047,243,047,240,041,240,042,238,042,235,040,235,035,237,034,236,041,231,041,227,032,234,025,234,021,235,021,234,018,236,014,236,015,226,019,223,018,221,015,220,
 							015,220,019,215,028,215,028,210,038,211,039,208,044,208,044,211,050,211,050,207,059,207,058,208,061,209,064,206,065,211,068,212,068,214,072,214,073,208,081,207,085,211,091,204,088,201,093,198,099,201,102,198,106,198,110,195,111,202,113,202,113,197,118,197,118,200,121,200,121,205,125,205,126,210,131,215,130,222,137,224,137,230,141,230,141,226,154,220,154,217,162,217,162,222,166,220,168,220,168,225,173,224,173,221,182,221,183,216,189,216,186,221,191,224,208,225"
-							href="carte-bretagne.html"
+							href="#"
 							target="_self" 
 							title="La Bretagne"
 							id="la-bretagne"
@@ -251,7 +93,7 @@
 							348,267,345,267,340,261,339,262,332,261,328,256,323,254,322,244,319,240,310,241,303,248,298,248,296,242,291,240,291,234,288,231,285,231,284,234,280,236,274,236,272,235,263,240,260,239,255,242,250,236,244,233,242,236,236,235,
 							236,235,234,233,229,233,227,231,223,235,221,235,217,238,209,233,208,225,
 							208,225,214,224,218,223,217,218,210,217,206,206,210,199,211,189,207,183,206,171,205,168,204,162,194,152,194,143,192,140,195,139,194,130,188,126,189,124,200,127,208,132,217,127,229,127,231,135,228,135,225,142,233,150,233,159,246,156,251,159,276,163,287,169,313,156,318,156,318,154,313,152,307,148,308,140,315,129,327,123,349,115,367,111,382,098"
-							href="carte-normandie.html"
+							href="#"
 							target="_self" 
 							title="La Normandie"
 							id="la-normandie"
@@ -273,7 +115,7 @@
 							300,355,297,356,289,365,288,365,287,364,286,361,277,362,273,363,262,364,261,368,258,371,255,371,251,369,246,369,242,372,245,376,244,381,252,386,250,391,255,396,253,399,256,403,257,412,255,414,257,417,255,421,255,424,258,423,260,425,254,430,252,430,247,433,244,430,241,430,237,432,235,426,232,427,223,432,
 							223,432,219,430,218,435,212,429,211,427,204,427,200,421,189,415,180,411,176,394,173,394,174,391,164,383,164,374,174,363,165,355,161,355,161,356,158,357,158,352,161,352,166,349,164,344,168,342,169,339,162,339,158,344,154,344,150,339,149,340,145,341,141,339,144,335,142,332,147,328,151,324,
 							151,324,156,325,171,319,171,311,178,306,191,305,193,305,198,305,200,301,203,298,209,297,210,294,215,295,220,298,219,299,224,299,230,281,232,280,237,281,237,272,235,270,236,260,234,259,234,254,237,251,237,244,236,244,236,235"
-							href="carte-pays-de-la-loire.html"
+							href="#"
 							target="_self" 
 							title="Les Pays de la loire"
 							alt="Les Pays de la loire" />				  
@@ -297,7 +139,7 @@
 							300,355,303,343,308,337,308,331,310,327,309,323,312,316,320,321,321,321,320,314,323,317,326,314,330,313,334,313,333,308,336,304,339,304,344,298,344,292,348,291,349,282,346,278,351,269,348,267, 
 							348,267,348,260,346,256,345,254,350,251,353,251,357,247,357,236,350,230,350,224,353,220,359,220,368,215,371,216,381,215,382,213,382,209,388,206,388,201,390,200 
 							"
-							href="carte-centre-val-de-loire.html"
+							href="#"
 							target="_self" 
 							title="Centre Val de Loire"
 							alt="Centre Val de Loire" />
@@ -321,7 +163,7 @@
 							264,743,256,748,254,747,251,746,248,748,237,739,236,733,224,733,216,728,210,727,208,724,201,723,200,716,196,720,196,724,194,724,190,720,190,718,194,716,194,710,196,708,195,704,184,699,184,702,179,703,180,698,174,698,171,695,171,692,
 							171,692,176,691,181,688,189,677,193,668,208,603,208,589,211,585,213,579,215,579,216,581,225,580,216,570,210,576,218,527,219,504,224,497,224,503,240,519,246,543,248,541,249,531,243,509,219,487,215,488,213,468,205,464,206,456,211,459,215,460,216,466,218,470,215,474,216,476,222,477,220,471,223,471,225,464,222,459,227,458,227,455,224,452,222,448,219,448,217,445,210,445,203,440,198,440,197,435,202,435,205,437,204,439,210,440,213,442,219,442,220,440,224,435,223,432
 							"
-							href="carte-nouvelle-aquitaine.html"
+							href="#"
 							target="_self" 
 							title="La Nouvelle-Aquitaine"
 							alt="La Nouvelle-Aquitaine" />	
@@ -343,7 +185,7 @@
 							492,784,489,783,486,780,473,780,470,785,461,788,461,792,458,791,455,790,453,794,447,788,435,783,427,784,422,790,419,791,414,787,413,781,405,779,400,774,398,766,384,764,380,766,375,758,362,758,357,750,350,751,341,749,334,744,329,744,329,759,311,758,309,757,306,760,301,759,296,754,287,758,282,758,276,754,277,751,264,743,
 							264,743,265,738,267,735,268,726,274,726,273,720,282,713,289,699,283,690,286,686,280,678,273,677,271,672,275,664,274,658,276,655,273,649,277,645,283,646,286,643,290,649,293,649,293,644,294,642,294,640,295,640,299,642,304,638,306,640,317,639,319,635,328,634,333,638,338,636,337,631,347,630,346,625,349,617,346,614,348,607,352,609,357,609,358,607,355,603,353,592,359,592,363,585,363,581,370,580,374,575,373,573,373,569,378,569,378,565,380,565,383,559,381,556,381,552,389,548,392,549,398,552,403,560,407,560,412,555,415,558,418,554,423,556
 							"
-							href="carte-occitanie.html"
+							href="#"
 							target="_self" 
 							title="L'Occitanie"
 							alt="L'Occitanie" />	
@@ -361,7 +203,7 @@
 							766,751,767,772,770,774,770,793,763,802,764,822,762,836,756,836,756,840,762,838,762,840,756,844,757,849,753,854,756,855,756,858,752,859,
 							752,859,750,857,748,856,747,855,749,854,732,849,726,845,723,841,724,838,728,838,732,832,717,830,717,827,721,823,722,823,723,821,720,819,722,816,722,813,719,813,716,814,711,813,709,810,713,805,717,803,717,799,712,796,706,794,706,788,703,785,711,783,712,781,711,779,703,774,709,767,710,760,712,759,712,756,717,756,718,754,724,747,733,746,734,740,737,738,740,738,746,739,747,742,750,741
 							"
-							href="carte-corse.html"
+							href="#"
 							target="_self" 
 							title="La Corse"
 							alt="La Corse" />	
@@ -381,7 +223,7 @@
 							783,616,783,620,785,623,784,633,781,634,777,635,776,637,777,640,773,644,776,651,771,654,771,657,765,658,758,663,752,664,751,672,746,675,740,674,740,681,734,688,725,688,724,694,716,701,724,701,724,707,719,709,714,708,713,711,707,711,704,714,703,719,695,715,692,715,689,719,689,723,689,719,677,718,667,724,667,717,653,710,638,710,639,705,634,705,637,700,636,696,631,699,613,699,612,695,607,690,603,691,600,694,605,699,595,700,592,700,585,698,586,694,592,694,590,690,566,689,
 							566,689,569,683,578,677,577,674,579,667,588,668,590,652,602,645,603,641,593,631,593,625,587,616
 							"
-							href="carte-provence-alpes-cote-dazur.html"
+							href="#"
 							target="_self" 
 							title="La Provence-Alpes-Côte-d'Azur"
 							alt="La Provence-Alpes-Côte-d'Azur" />	
@@ -403,7 +245,7 @@
 							476,268,482,260,480,257,482,252,486,250,503,249,
 							503,249,504,238,506,234,507,230,510,229,510,226,506,226,506,222,506,219,504,216,503,212,506,209,507,208
 							"
-							href="carte-ile-de-france.html"
+							href="#"
 							target="_self" 
 							title="L'Ile de France"
 							alt="L'Ile de France" />	
@@ -448,7 +290,7 @@
 							483,392,485,387,484,383,483,377,484,377,484,372,481,368,482,360,479,355,479,349,473,345,472,341,475,338,475,332,471,327,471,324,474,324,476,323,476,315,471,308,471,305,478,305,481,301,481,297,479,294,487,288,487,281,482,276,481,272,476,268,
 							476,268,482,260,480,257,482,252,486,250,503,249
 							"
-							href="carte-bourgogne-franche-comtes.html"
+							href="#"
 							target="_self" 
 							title="Bourgogne-Franche-Comtés"
 							alt="Bourgogne-Franche-Comtés" />	
@@ -471,7 +313,7 @@
 							503,249,504,238,506,234,507,230,510,229,510,226,506,226,506,222,506,219,504,216,503,212,506,209,507,208,
 							507,208,506,206,510,202,514,200,516,194,518,192,517,189,513,189,513,187,515,187,516,184,514,183,515,180,522,179,517,173,517,166,522,162,528,161,529,158,531,156,537,160,540,160,540,148,541,141,537,139,538,136,544,135,544,130,549,128,549,117,551,115,549,111,548,106								
 							"
-							href="carte-grand-est.html"
+							href="#"
 							target="_self" 
 							title="Le Grand-Est"
 							alt="Le Grand-Est" />
@@ -493,7 +335,7 @@
 							403,174,403,171,405,172,408,171,406,161,404,159,404,157,407,150,405,150,404,144,403,143,403,138,405,133,403,132,406,126,407,125,404,121,403,115,389,100,388,098,382,098,  
 							382,098,391,086,400,091,401,086,394,078,394,028,409,017,439,012,450,007				
 							"
-							href="carte-hauts-de-france.html"
+							href="#"
 							target="_self" 
 							title="Les Hauts de France"	
 							alt="Les Hauts de France" />	
@@ -530,12 +372,12 @@
 							015,262,
 							014,260,041,259,043,257,043,253,042,249,032,245,028,250,028,243,023,242,026,238,032,242,038,243,047,243,047,240,041,240,042,238,042,235,040,235,035,237,034,236,041,231,041,227,032,234,025,234,021,235,021,234,018,236,014,236,015,226,019,223,018,221,015,220
 							"
-							href="france_nouvelles-regions.html"
+							href="#"
 							target="_self" 
 							title="La FRANCE"
 							alt="La FRANCE" />				
 					</map>
-					<img usemap="#carte_france" src="./images/France_Nouvelles-Regions.png" alt="Carte France (par régions)" />		
+					<img usemap="#carte_france" src="./assets/images/carte-france-regions.png" alt="Carte de France par régions." />		
 				</article>
 			</section>
 			
@@ -549,51 +391,51 @@
 					<div class="liste_regions">
 						<aside>
 							<!-- La Bretagne -->
-							<a href="./bretagne/region_bretagne.html"><img src="./images/regions/Bretagne1_100x100.png" class="logo_regions" title="La Bretagne" alt="La Bretagne" /></a>
+							<a href="#"><img src="./assets/images/regions/Bretagne1_100x100.png" class="logo_regions" title="La Bretagne" alt="La Bretagne" /></a>
 						</aside>
 						<aside>
 							<!-- La Normandie -->
-							<a href="#"><img src="./images/regions/Normandie1_100x100.png" class="logo_regions" title="La Normandie" alt="La Normandie" /></a>
+							<a href="#"><img src="./assets/images/regions/Normandie1_100x100.png" class="logo_regions" title="La Normandie" alt="La Normandie" /></a>
 						</aside>
 						<aside>
 							<!-- Les Pays de la loire -->
-							<a href="./pays-de-la-loire/region_pays-de-la-loire.html"><img src="./images/regions/Pays-de-la-loire1_100x100.png" class="logo_regions" title="Les Pays de la loire" alt="Les Pays de la loire"  /></a>
+							<a href="#"><img src="./assets/images/regions/Pays-de-la-loire1_100x100.png" class="logo_regions" title="Les Pays de la loire" alt="Les Pays de la loire"  /></a>
 						</aside>
 						<aside>
 							<!-- La Nouvelle-Aquitaine -->
-						   <a href="#"><img src="./images/regions/Nouvelle-Aquitaine1_100x100.png" class="logo_regions" title="La Nouvelle-Aquitaine" alt="La Nouvelle-Aquitaine"  /></a>
+						   <a href="#"><img src="./assets/images/regions/Nouvelle-Aquitaine1_100x100.png" class="logo_regions" title="La Nouvelle-Aquitaine" alt="La Nouvelle-Aquitaine"  /></a>
 						</aside>
 						<aside>
 							<!-- L'Occitanie -->
-						   <a href="./occitanie/region_occitanie.html"><img src="./images/regions/Occitanie1_100x100.png" class="logo_regions" title="L'Occitanie" alt="L'Occitanie"  /></a>
+						   <a href="#"><img src="./assets/images/regions/Occitanie1_100x100.png" class="logo_regions" title="L'Occitanie" alt="L'Occitanie"  /></a>
 						</aside>
 						<aside>
 							<!-- La Corse -->
-							<a href="#"><img src="./images/regions/Corse1_100x100.png" class="logo_regions" title="La Corse" alt="La Corse"  /></a>
+							<a href="#"><img src="./assets/images/regions/Corse1_100x100.png" class="logo_regions" title="La Corse" alt="La Corse"  /></a>
 						</aside>
 						<aside>
 							<!-- La Provence-Alpes-Côte-d'Azur -->
-							<a href="#"><img src="./images/regions/Provence-Alpes-Cote-dAzur1_100x100.png" class="logo_regions" title="La Provence-Alpes-Côte-d'Azur" alt="La Provence-Alpes-Côte-d'Azur"  /></a>
+							<a href="#"><img src="./assets/images/regions/Provence-Alpes-Cote-dAzur1_100x100.png" class="logo_regions" title="La Provence-Alpes-Côte-d'Azur" alt="La Provence-Alpes-Côte-d'Azur"  /></a>
 						</aside>
 						<aside>
 							<!-- L'Ile de France -->
-							<a href="#"><img src="./images/regions/Ile-de-France1_100x100.png" class="logo_regions" title="L'Ile de France" alt="L'Ile de France"  /></a>
+							<a href="#"><img src="./assets/images/regions/Ile-de-France1_100x100.png" class="logo_regions" title="L'Ile de France" alt="L'Ile de France"  /></a>
 						</aside>
 						<aside>
 							<!-- L'Auvergne-Rhône-Alpes -->
-							<a href="./auvergne-rhone-alpes/region_auvergne-rhone-alpes.html"><img src="./images/regions/Auvergne-Rhone-Alpes1_100x100.png" class="logo_regions" title="L'Auvergne-Rhône-Alpes" alt="L'Auvergne-Rhône-Alpes"  /></a>
+							<a href="./auvergne-rhone-alpes/region_auvergne-rhone-alpes.html"><img src="./assets/images/regions/Auvergne-Rhone-Alpes1_100x100.png" class="logo_regions" title="L'Auvergne-Rhône-Alpes" alt="L'Auvergne-Rhône-Alpes"  /></a>
 						</aside>
 						<aside>
 							<!-- La Bourgogne-Franche-Comtés -->
-							<a href="#"><img src="./images/regions/Bourgogne-Franche-Comte1_100x100.png" class="logo_regions" title="La Bourgogne-Franche-Comtés" alt="La Bourgogne-Franche-Comtés"  /></a>
+							<a href="#"><img src="./assets/images/regions/Bourgogne-Franche-Comte1_100x100.png" class="logo_regions" title="La Bourgogne-Franche-Comtés" alt="La Bourgogne-Franche-Comtés"  /></a>
 						</aside>
 						<aside>
 							<!-- Le Grand-Est -->
-							<a href="./grand-est/region_grand-est.html"><img src="./images/regions/Grand-Est1_100x100.png" class="logo_regions" title="Le Grand-Est" alt="Le Grand-Est"  /></a>
+							<a href="#"><img src="./assets/images/regions/Grand-Est1_100x100.png" class="logo_regions" title="Le Grand-Est" alt="Le Grand-Est"  /></a>
 						</aside>
 						<aside>
 							<!-- Les Hauts de Franc -->
-							<a href="./hauts-de-france/region_hauts-de-france.html"><img src="./images/regions/Hauts-de-France1_100x100.png" class="logo_regions" title="Les Hauts de France" alt="Les Hauts de France"  /></a>
+							<a href="#"><img src="./assets/images/regions/Hauts-de-France1_100x100.png" class="logo_regions" title="Les Hauts de France" alt="Les Hauts de France"  /></a>
 						</aside>
 					</div>
 				</article>		
