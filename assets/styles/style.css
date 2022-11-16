@@ -1,0 +1,195 @@
+/* Reset CSS */
+
+*, 
+::before, 
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Définition des polices personnalisées */
+@font-face{ 
+	font-family: '2Dumb';
+	src: url('fonts/2Dumb.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Eléments principaux de la page */
+
+body {
+	font-family: Arial, sans-serif, Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+}
+
+h1 {
+	font-family: '2Dumb', Arial, sans-serif, Georgia, "Times New Roman", Times, serif;
+	font-size: 2.5em;
+	font-weight: normal;
+	margin: 0 0 0 10px;
+} 
+
+/* Header */
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+header h2 {
+	font-family: Dayrom, serif;
+	font-size: 1.1em;
+	margin-top: 0px;
+	font-weight: normal;
+}
+
+/* Navigation */
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+}
+
+nav li {
+	margin-right: 15px;
+}
+
+nav a {
+	font-size: 1.3em;
+	color: #181818;
+	padding-bottom: 3px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #760001;
+	border-bottom: 3px solid #760001;
+}
+
+#liens_internes {
+	display: flex;
+	flex-direction: row; 
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.element {
+	width: 100px;
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 3px;
+	flex-direction: row; 
+	margin:2px;
+}
+
+#logo_site {
+	width: 375px;
+	height: 48px;
+}
+
+/* configuration générale des sections */
+
+#section_gauche h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.8em;
+	margin-bottom: 2px;
+}
+
+#section_droite h2 {
+	font-family: '2Dumb', Arial, sans-serif, Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-bottom: 2px;
+}
+
+#donnees {
+	display: flex;
+	
+}
+
+#section_gauche {
+	width: 75%;
+	text-align: center;	
+}
+
+#section_droite {
+	text-align: center;		
+	width: 25%;	
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+
+.liste_regions {
+	display: flex;
+	flex-direction: row; 
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	row-gap: 20px;
+	column-gap: 10px;
+}
+
+.logo_regions {	
+	padding: 0.1em;	
+	width:80px;
+}
+
+.liste_departements {
+	display: flex;
+	flex-direction: row; 
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	row-gap: 10px;
+	column-gap: 2px;
+}
+
+.logo_departements {	
+	padding: 0.1em;
+	width:60px;
+}
+
+/* Configuration des menus déroulants - section à droite */
+#section_droite select {
+	box-shadow: 1px 1px 3px #ccc;
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+
+/* Configuration des menus déroulants - section à gauche */
+#section_gauche select {
+	border-radius: 15px;
+	margin-bottom: 10px;
+	margin-right: 25px;
+	margin-left: 5px;
+	margin-top: 2px;
+}
+
+#section_gauche fieldset {
+	border: 0;
+	display: flex;
+	justify-content: center;
+}
+
+#section_gauche label {
+	color: blue;
+	padding-right: 20px;
+}
+
+#departements {
+	background: rgba(204,51,0,0.1);
+	border: 0;
+}
+
+#regions {
+	background: rgba(102,102,255,0.1);
+	border: 0;
+}
+
+
+
+
