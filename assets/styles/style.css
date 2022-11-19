@@ -133,6 +133,11 @@ nav a:hover {
   height: 20px;
 }
 
+#section_gauche ul {
+  text-align: left;
+  margin: 0 100px;
+}
+
 /* Configuration des menus déroulants - section à gauche */
 #section_gauche select {
   border-radius: 15px;
@@ -210,6 +215,14 @@ nav a:hover {
 #container_imagesapropos img {
   width: 150px;
   padding: 10 15px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+#container_imagesapropos img:hover {
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari 3-8 */
+  transform: scale(2);
 }
 
 /* section droite */
