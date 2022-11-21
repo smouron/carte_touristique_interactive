@@ -31,29 +31,28 @@
 	<header>
 		<a href="./index.html"><img src="./assets/images/logo-de-tourisme.png" class="logo_site"
 				title="Logo Sanoe Tourisme" alt="Logo Sanoe Tourisme" /></a>
-		<nav id="liens_internes">
+		<nav role="navigation" aria-label="Menu principal" id="menu_principal">
 			<ul>
-				<li><a href="./index.html" alt="Retour à la page d'accueil du site">ACCUEIL</a></li>
-				<li><a href="./apropos.html" alt="A propos de ce site et de moi">A PROPOS</a></li>
-				<li><a href="mailto:stephane.mouron@sanoecreation.fr" alt="Me contacter par email">CONTACT</a></li>
+				<li><a href="./index.html" aria-label="Retour à la page d'accueil du site" alt="Retour à la page d'accueil du site">ACCUEIL</a></li>
+				<li><a href="./apropos.html" aria-label="A propos de ce site et de moi" alt="A propos de ce site et de moi">A PROPOS</a></li>
+				<li><a href="mailto:stephane.mouron@sanoecreation.fr" aria-label="Me contacter par email" alt="Me contacter par email">CONTACT</a></li>
 				<li><a href="https://www.sanoecreation.fr/cv_stephane-mouron/" target="_blank"
-						alt="Accéder à mon CV">MON CV</a></li>
+						aria-label="Accéder à mon CV" alt="Accéder à mon CV">MON CV</a></li>
 			</ul>
 		</nav>
 	</header>
-	<hr />
 	<main id="donnees">
-		<section id="section_gauche">
+		<section aria-label="section gauche" id="section_gauche">
 			<h1>Carte de France métropolitaine</h1>
 			<h2>Sélectionner la carte à afficher</h2>
 			<br />
-			<nav>
+			<nav role="navigation" aria-label="Menu secondaire pour sélectionner la zone touristique souhaitée.">
 				<!--                                                                   -->
 				<!-- Menu déroulant avec la liste des départements, classés par région -->
 				<!--                                                                 -->
-				<div class="par-departement">
-					<label for="pays">Par département</label>
-					<form name="form">
+				<div>
+					<form action="" class="liste-departements">
+					<label for="departements">Par département</label>					
 						<select size="1" name="departements" id="departements">
 							<option value="aucun" selected> </option>
 							<optgroup label="Auvergne-Rhône-Alpes">
@@ -177,22 +176,17 @@
 								<option value="var">Var (83)</option>
 								<option value="vaucluse">Vaucluse (84)</option>
 							</optgroup>
-							<optgroup label="">
-								<option value=""></option>
-								<option value=""></option>
-							</optgroup>
 						</select>
-					</form>
+					</form>	
 				</div>
-				<div class="par-region">
+				<div class="liste-regions">
 					<!--                                          -->
 					<!-- Menu déroulant avec la liste des régions -->
 					<!--                                          -->
-					<label for="pays">Par région</label><br />
-					<form name="form">
+					<label for="regions">Par région</label><br />
 						<select size="1" name="regions" id="regions"
 							onChange="location = this.options[this.selectedIndex].value;">
-							<option value="./index.html" selected> </option>
+							<option value="#" selected> </option>
 							<option value="#">Auvergne-Rhône-Alpes</option>
 							<option value="#">Bourgogne-Franche-Comté</option>
 							<option value="#">Bretagne</option>
@@ -206,9 +200,8 @@
 							<option value="#">Occitanie</option>
 							<option value="#">Pays de la Loire</option>
 							<option value="#">Provence-Alpes-Côte d'Azur</option>
-							<option value="./index.html"></option>
+							<option value="#"></option>
 						</select>
-					</form>
 				</div>
 			</nav>
 
