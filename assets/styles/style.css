@@ -298,3 +298,28 @@ select {
   row-gap: 10px;
   column-gap: 2px;
 }
+
+/* flexisel */
+
+#flexisel h3 {
+	text-align: center;
+}
+
+.nbs-flexisel-ul {
+	height: 180px;
+}
+
+
+.nbs-flexisel-item img {
+	max-height: 125px;
+}
+
+.nbs-flexisel-ul figcaption {
+	font-size: 0.8rem;
+	line-height: 0.9rem;
+}
+
+.nbs-flexisel-ul p {
+	font-size: 0.7rem;
+	line-height: 0.8rem;
+}
