@@ -4,6 +4,8 @@
 /* Free to use and abuse under the MIT license. */
 /* http://www.opensource.org/licenses/mit-license.php */
 
+/* Ajout d'un Hover sur le images */
+/* Et passage du pointer de Item à Img */
 
 .clearout {
 height:5px;
@@ -50,16 +52,26 @@ display:none;
     float:left;
     margin:0px;
     padding:0px;
-    cursor:pointer;
     position:relative;
     line-height:0px;
 }
+
 .nbs-flexisel-item img {
     max-width: 100%;
     cursor: pointer;
     position: relative;
     margin-top: 10px;
+    cursor:pointer;
     margin-bottom: 10px;
+	 -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.nbs-flexisel-item img:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+	border-radius: 15px;
 }
 
 /*** Navigation ***/
