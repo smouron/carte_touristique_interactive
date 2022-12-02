@@ -27,7 +27,7 @@
 	<link rel="stylesheet" media="screen and (max-width: 1024px)" href="./assets/styles/petite_resolution.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="./assets/js/jquery.flexisel.js"></script>
-	
+
 	<link rel="shortcut icon" href="./assets/images/favicon.png">
 </head>
 
@@ -37,34 +37,33 @@
 				title="Logo Sanoe Tourisme" alt="Logo Sanoe Tourisme" /></a>
 		<nav role="navigation" aria-label="Menu principal" id="menu_principal">
 			<ul>
-				<li><a href="./index.html" aria-label="Retour à la page d'accueil du site" alt="Retour à la page d'accueil du site">ACCUEIL</a></li>
-				<li><a href="./apropos.html" aria-label="A propos de ce site et de moi" alt="A propos de ce site et de moi">A PROPOS</a></li>
-				<li><a href="mailto:stephane.mouron@sanoecreation.fr" aria-label="Me contacter par email" alt="Me contacter par email">CONTACT</a></li>
+				<li><a href="./index.html" aria-label="Retour à la page d'accueil du site"
+						alt="Retour à la page d'accueil du site">ACCUEIL</a></li>
+				<li><a href="./apropos.html" aria-label="A propos de ce site et de moi"
+						alt="A propos de ce site et de moi">A PROPOS</a></li>
+				<li><a href="mailto:stephane.mouron@sanoecreation.fr" aria-label="Me contacter par email"
+						alt="Me contacter par email">CONTACT</a></li>
 				<li><a href="https://www.sanoecreation.fr/cv_stephane-mouron/" target="_blank"
 						aria-label="Accéder à mon CV" alt="Accéder à mon CV">MON CV</a></li>
 			</ul>
 		</nav>
-	</header>	
-		
-	<iframe id="carrousel"
-		title="Carrousel de sites"
-		width="100%"
-		height="215"
-		src="./carrousel.html">
+	</header>
+
+	<iframe id="carrousel" title="Carrousel de sites" width="100%" height="215" src="./carrousel.html">
 	</iframe>
-	
-	<main id="donnees">	
+
+	<main id="donnees">
 		<section aria-label="section gauche" id="section_gauche">
 			<h1>Carte de France métropolitaine</h1>
 			<h2>Sélectionner la carte à afficher</h2>
 			<br />
 			<nav role="navigation" aria-label="Menu secondaire pour sélectionner la zone touristique souhaitée.">
-				<!--                                                                   -->
-				<!-- Menu déroulant avec la liste des départements, classés par région -->
-				<!--                                                                 -->
+				<!--				
+					 Menu déroulant avec la liste des départements, classés par région
+				 -->
 				<div>
 					<form action="" class="liste-departements">
-					<label for="departements">Par département</label>					
+						<label for="departements">Par département</label>
 						<select size="1" name="departements" id="departements">
 							<option value="aucun" selected> </option>
 							<optgroup label="Auvergne-Rhône-Alpes">
@@ -128,7 +127,7 @@
 								<option value="somme">Somme (80)</option>
 							</optgroup>
 							<optgroup label="Île-de-France">
-								<option value="Paris">Paris (75)</option>
+								<option value="paris">Paris (75)</option>
 								<option value="seine-et-marne">Seine-et-Marne (77)</option>
 								<option value="yvelines">Yvelines (78)</option>
 								<option value="essonne">Essonne (91)</option>
@@ -189,15 +188,15 @@
 								<option value="vaucluse">Vaucluse (84)</option>
 							</optgroup>
 						</select>
-					</form>	
+					</form>
 				</div>
-				<div class="liste-regions">
-					<!--                                          -->
-					<!-- Menu déroulant avec la liste des régions -->
-					<!--                                          -->
-					<label for="regions">Par région</label><br />
-						<select size="1" name="regions" id="regions"
-							onChange="location = this.options[this.selectedIndex].value;">
+				<div>
+					<!--                                          
+						 Menu déroulant avec la liste des régions 
+					-->
+					<form action="" class="liste-regions">
+						<label for="regions">Par région</label><br />
+						<select size="1" name="regions" id="regions">
 							<option value="#" selected> </option>
 							<option value="#">Auvergne-Rhône-Alpes</option>
 							<option value="#">Bourgogne-Franche-Comté</option>
@@ -214,6 +213,44 @@
 							<option value="#">Provence-Alpes-Côte d'Azur</option>
 							<option value="#"></option>
 						</select>
+					</form>
+				</div>
+				<div>
+					<!--                                          
+						 Menu déroulant avec la liste des thèmes 
+					-->
+					<form action="" class="liste-themes">
+						<label for="themes">Par thèmes</label><br />
+						<select size="1" name="themes" id="themes">
+							<option value="#" selected> </option>
+							<option value='aquarium'>Aquarium</option>
+							<option value='bunker'>Bunker</option>
+							<option value='cathedrale'>Cathédrale</option>
+							<option value='chateau'>Château</option>
+							<option value='chateau_fort'>Château Fort</option>
+							<option value='chateaux_de_la_loire'>Chateaux de la loire</option>
+							<option value='fort'>Fort</option>
+							<option value='forteresse_medievale'>Forteresse médiévale</option>
+							<option value='fortifications_todt'>Fortifications Todt </option>
+							<option value='ligne_maginot'>Ligne Maginot</option>
+							<option value='moulin'>Moulin</option>
+							<option value='mur_de_la_mediterranee'>Mur de la Méditerranée</option>
+							<option value='mur_de_l_atlantique'>Mur de l'Atlantique</option>
+							<option value='musee'>Musée</option>
+							<option value='parc_animalier'>Parc animalier</option>
+							<option value='parc_d_attractions'>Parc d'attractions</option>
+							<option value='phare'>Phare</option>
+							<option value='plages_du_debarquement'>Plages du débarquement</option>
+							<option value='site_historique'>Site historique</option>
+							<option value='sites_archeologiques'>Sites archéologiques </option>
+							<option value='systeme_sere_de_rivieres'>Système Séré de Rivières</option>
+							<option value='troglodytiques'>Troglodytiques</option>
+							<option value='tumulus_neolithique'>Tumulus néolithique</option>
+							<option value='vauban'>Vauban</option>
+							<option value='ville_fortifiee'>Ville Fortifiée</option>
+							<option value='zoo'>Zoo</option>
+						</select>
+					</form>
 				</div>
 			</nav>
 
