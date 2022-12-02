@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="robots" CONTENT="noindex, nofollow">
+
+	<meta name="author" CONTENT="Stéphane Mouron">
+	<meta name="date" CONTENT="2022/11/16">
+
+	<title>Sanoe Tourisme - Carte de France interactive par themes</title>
+	<meta name="description"
+		content="Carte intéractive, référençant tous les lieux touristiques en France métropolitaine.">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="SanoeTourisme" />
+	<meta property="og:url" content="#" />
+	<meta name="og:description"
+		content="Carte intéractive, référençant tous les lieux touristiques en France métropolitaine.">
+	<meta property="og:image" content=".\assets\images\carte-france-regions.png" />
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="./assets/styles/style.css" />
+	<link rel="stylesheet" media="screen and (max-width: 1024px)" href="./assets/styles/petite_resolution.css" />
+	<link rel="shortcut icon" href="./assets/images/favicon.png">
+</head>
+
+<body>
+	<header>
+		<a href="./index.html"><img src="./assets/images/logo-de-tourisme.png" class="logo_site"
+				title="Logo Sanoe Tourisme" alt="Logo Sanoe Tourisme" /></a>
+		<nav role="navigation" aria-label="Menu principal" id="menu_principal">
+			<ul>
+				<li><a href="./index.html" aria-label="Retour à la page d'accueil du site"
+						alt="Retour à la page d'accueil du site">ACCUEIL</a></li>
+				<li><a href="./apropos.html" aria-label="A propos de ce site et de moi"
+						alt="A propos de ce site et de moi">A PROPOS</a></li>
+				<li><a href="mailto:stephane.mouron@sanoecreation.fr" aria-label="Me contacter par email"
+						alt="Me contacter par email">CONTACT</a></li>
+				<li><a href="https://www.sanoecreation.fr/cv_stephane-mouron/" target="_blank"
+						aria-label="Accéder à mon CV" alt="Accéder à mon CV">MON CV</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<iframe id="carrousel" title="Carrousel de sites" width="100%" height="215" src="./carrousel.html">
+	</iframe>
+
+	<div id="donnees">
+		<section id="section_gauche">
+			<h1>Carte de France métropolitaine</h1>
+			<!-- <h2>Sélectionner le département souhaité</h2> -->
+			<br />
+
+			<!--                                                                  -->
+			<!-- Affichage de la carte de France avec les régions sélectionnables -->
+			<!--                                                                  -->
+			<article>
+				<map name="carte_france">
+					<!-- La Corse -->
+					<!-- -->
+					<!-- Ligne 1 : CAP -->
+					<!-- Ligne 2 : Cote Est -->
+					<!-- Ligne 3 : Cote Ouest -->
+					<!-- -->
+					<area shape="poly" coords="
+							750,741,752,738,752,730,750,728,749,726,752,724,752,720,753,719,749,715,751,713,754,712,757,713,761,730,759,734,760,745,766,751,
+							766,751,767,772,770,774,770,793,763,802,764,822,762,836,756,836,756,840,762,838,762,840,756,844,757,849,753,854,756,855,756,858,752,859,
+							752,859,750,857,748,856,747,855,749,854,732,849,726,845,723,841,724,838,728,838,732,832,717,830,717,827,721,823,722,823,723,821,720,819,722,816,722,813,719,813,716,814,711,813,709,810,713,805,717,803,717,799,712,796,706,794,706,788,703,785,711,783,712,781,711,779,703,774,709,767,710,760,712,759,712,756,717,756,718,754,724,747,733,746,734,740,737,738,740,738,746,739,747,742,750,741
+							" href="#" target="_self" title="La FRANCE métropolitaine" alt="La carte FRANCE métropolitaine" />
+
+					<!-- La FRANCE par départements -->
+					<!-- -->
+					<!-- Ligne 1 : Manche -->
+					<!-- Ligne 2 : Belgique / Luxembourg -->
+					<!-- Ligne 3 : Allemagne / Suisses -->
+					<!-- Ligne 4 : Suisses / Italie -->
+					<!-- Ligne 5 : Mer -->
+					<!-- Linge 6 : Espagne -->
+					<!-- Linge 7 : Océan atlantique -->
+					<!-- -->
+					<area shape="poly" coords="
+							015,220,019,215,028,215,028,210,038,211,039,208,044,208,044,211,050,211,050,207,059,207,058,208,061,209,064,206,065,211,068,212,068,214,072,214,073,208,081,207,085,211,091,204,088,201,093,198,099,201,102,198,106,198,110,195,111,202,113,202,113,197,118,197,118,200,121,200,121,205,125,205,126,210,131,215,130,222,137,224,137,230,141,230,141,226,154,220,154,217,162,217,162,222,166,220,168,220,168,225,173,224,173,221,182,221,183,216,189,216,186,221,191,224,208,225,
+							208,225,214,224,218,223,217,218,210,217,206,206,210,199,211,189,207,183,206,171,205,168,204,162,194,152,194,143,192,140,195,139,194,130,188,126,189,124,200,127,208,132,217,127,229,127,231,135,228,135,225,142,233,150,233,159,246,156,251,159,276,163,287,169,313,156,318,156,318,154,313,152,307,148,308,140,315,129,327,123,349,115,367,111,382,098,
+							382,098,391,086,400,091,401,086,394,078,394,028,409,017,439,012,450,007	,
+							450,007,455,018,452,021,452,027,455,032,458,031,463,035,463,038,465,041,471,041,474,037,484,034,484,037,491,042,491,057,496,058,498,060,502,060,506,057,506,059,510,060,514,064,514,076,519,076,520,072,535,072,546,080,543,084,543,088,540,091,547,093,548,097,542,097,542,101,542,105,548,106,
+							548,106,556,105,560,108,574,102,574,095,580,088,585,088,585,093,581,097,583,099,581,106,587,111,587,112,585,113,585,120,596,123,600,128,611,128,612,136,616,137,619,139,619,145,622,146,624,143,629,144,633,140,640,140,646,146,658,149,662,143,668,143,670,147,677,146,688,152,687,159,693,161,692,165,697,172,704,172,704,167,712,167,719,175,731,174,735,170,741,170,750,179,762,178,762,181,765,181,770,178,775,181,782,181,786,184,
+							786,184,783,185,778,194,780,198,777,200,775,200,771,205,771,208,764,213,762,226,759,237,760,246,752,261,753,273,755,276,752,278,752,287,751,289,751,298,747,300,752,308,755,309,752,313,752,320,745,325,735,325,734,323,734,320,729,320,
+							729,320,726,322,717,332,718,333,727,332,722,337,720,337,720,344,711,354,706,356,707,362,703,365,691,372,691,387,673,405,674,410,670,414,671,421,
+							671,421,675,421,676,424,672,431,674,434,668,435,664,438,664,445,675,445,685,437,682,433,684,425,688,425,688,427,691,426,699,421,713,421,713,424,718,430,719,434,716,437,716,441,722,443,722,450,725,449,731,457,731,464,720,470,719,481,725,487,730,486,731,497,739,502,740,506,744,507,739,516,741,517,740,523,728,528,727,533,723,533,721,531,711,534,
+							711,534,714,543,719,544,720,554,728,558,737,558,737,568,741,571,738,571,735,574,735,581,727,588,730,593,734,595,731,596,731,603,737,607,737,613,744,613,750,615,752,617,757,622,764,622,783,616,
+							783,616,783,620,785,623,784,633,781,634,777,635,776,637,777,640,773,644,776,651,771,654,771,657,765,658,758,663,752,664,751,672,746,675,740,674,740,681,734,688,725,688,724,694,716,701,724,701,724,707,719,709,714,708,713,711,707,711,704,714,703,719,695,715,692,715,689,719,689,723,689,719,677,718,667,724,667,717,653,710,638,710,639,705,634,705,637,700,636,696,631,699,613,699,612,695,607,690,603,691,600,694,605,699,595,700,592,700,585,698,586,694,592,694,590,690,566,689,
+							566,689,555,689,555,683,543,682,514,707,506,706,505,710,494,713,495,716,487,723,483,720,479,724,483,729,487,729,486,773,492,781,492,784,
+							492,784,489,783,486,780,473,780,470,785,461,788,461,792,458,791,455,790,453,794,447,788,435,783,427,784,422,790,419,791,414,787,413,781,405,779,400,774,398,766,384,764,380,766,375,758,362,758,357,750,350,751,341,749,334,744,329,744,329,759,311,758,309,757,306,760,301,759,296,754,287,758,282,758,276,754,277,751,264,743,
+							264,743,256,748,254,747,251,746,248,748,237,739,236,733,224,733,216,728,210,727,208,724,201,723,200,716,196,720,196,724,194,724,190,720,190,718,194,716,194,710,196,708,195,704,184,699,184,702,179,703,180,698,174,698,171,695,171,692,
+							171,692,176,691,181,688,189,677,193,668,208,603,208,589,211,585,213,579,215,579,216,581,225,580,216,570,210,576,218,527,219,504,224,497,224,503,240,519,246,543,248,541,249,531,243,509,219,487,215,488,213,468,205,464,206,456,211,459,215,460,216,466,218,470,215,474,216,476,222,477,220,471,223,471,225,464,222,459,227,458,227,455,224,452,222,448,219,448,217,445,210,445,203,440,198,440,197,435,202,435,205,437,204,439,210,440,213,442,219,442,220,440,224,435,223,432
+							223,432,219,430,218,435,212,429,211,427,204,427,200,421,189,415,180,411,176,394,173,394,174,391,164,383,164,374,174,363,165,355,161,355,161,356,158,357,158,352,161,352,166,349,164,344,168,342,169,339,162,339,158,344,154,344,150,339,149,340,145,341,141,339,144,335,142,332,147,328,151,324,
+							151,324,149,322,146,326,145,323,148,320,147,319,130,320,131,321,126,321,123,316,121,315,121,313,123,314,127,316,131,316,133,314,133,312,128,309,124,309,124,310,121,311,120,307,117,307,120,311,117,313,114,309,114,308,112,308,112,311,109,312,108,317,110,319,108,321,104,318,106,317,106,309,97,301,96,301,96,296,93,296,93,298,89,298,85,291,75,292,74,288,72,287,72,290,65,289,60,280,60,278,58,278,58,283,55,283,53,280,48,280,45,279,44,280,47,284,45,286,40,286,38,285,35,286,34,283,35,283,35,273,28,266,23,266,22,264,17,264,
+							015,262,
+							014,260,041,259,043,257,043,253,042,249,032,245,028,250,028,243,023,242,026,238,032,242,038,243,047,243,047,240,041,240,042,238,042,235,040,235,035,237,034,236,041,231,041,227,032,234,025,234,021,235,021,234,018,236,014,236,015,226,019,223,018,221,015,220
+							" href="#" target="_self" title="La France métropolitaine" alt="La carte France métropolitaine" />
+				</map>
+				<img usemap="#carte_france" src="./assets/images/carte-france.png"
+					alt="Carte de France métropolitaine" />
+			</article>
+		</section>
+
+		<section id="section_droite">
+
+			<article>
+				<!--                                          -->
+				<!-- Affiche de la liste des logo des thèmes -->
+				<!--                                          -->
+				<h2>Classé par thèmes de sortie</h2>
+				<div class="liste_themes">
+					<aside>
+						<!-- Aquariums -->
+						<a href="#"><img src="./assets/images/themes/aquarium.png" class="logo_themes"
+								title="Les aquariums et les mondes sous-marins" alt="Visiter des aquariuns" /></a>
+					</aside>
+					<aside>
+						<!-- Cathedrales -->
+						<a href="#"><img src="./assets/images/themes/cathedrales.png" class="logo_themes"
+								title="Les cathedrales et sites religieux"
+								alt="Visiter des cathedrales et des sites religieux" /></a>
+					</aside>
+					<aside>
+						<!-- Monuments historiques -->
+						<a href="#"><img src="./assets/images/themes/monuments_historiques.png" class="logo_themes"
+								title="Les monuments historiques" alt="Visiter les monuments historiques" /></a>
+					</aside>
+					<aside>
+						<!-- Parcs d'attractions -->
+						<a href="#"><img src="./assets/images/themes/parcs_d_attractions.png" class="logo_themes"
+								title="Les Parcs d'attractions et de loisir"
+								alt="Visiter des parcs d'attractions et de loisir" /></a>
+					</aside>
+					<aside>
+						<!-- Phares -->
+						<a href="#"><img src="./assets/images/themes/phares.png" class="logo_themes"
+								title="Les phares et des sémaphores" alt="Visiter des phares et des sémaphores" /></a>
+					</aside>
+					<aside>
+						<!-- Prehistoire -->
+						<a href="#"><img src="./assets/images/themes/prehistoire.png" class="logo_themes"
+								title="Sites sur le prehistoire" alt="Visiter des sites sur le prehistoire" /></a>
+					</aside>
+					<aside>
+						<!-- Musées -->
+						<a href="#"><img src="./assets/images/themes/musees.png" class="logo_themes" title="Les musées"
+								alt="Visiter les musées" /></a>
+					</aside>
+				</div>
+			</article>
+		</section>
+	</div>
+
+	<footer>
+
+	</footer>
+</body>
+
+</html>

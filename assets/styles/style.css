@@ -254,19 +254,32 @@ select {
   padding: 10px;
 }
 
-.logo_regions {
+.logo_regions,
+.logo_departements,
+.logo_themes {
   padding: 0.1em;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+ } 
+  
+.logo_regions {
   width: 80px;
 }
 
 .logo_departements {
-  padding: 0.1em;
   width: 60px;
 }
 
 .logo_themes {
-  padding: 0.1em;
-  width: 60px;
+  width: 80px;
+}
+
+.logo_regions:hover,
+.logo_departements:hover,
+.logo_themes:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);	
 }
 
 /* Configuration des menus déroulants - section à droite */
